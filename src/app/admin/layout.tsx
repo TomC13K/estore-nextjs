@@ -1,4 +1,4 @@
-import { Nav, NavLink } from "@/components/Nav";
+import { Nav, NavLink } from "@/src/components/Nav";
 import React from "react";
 
 export default function AdminLayout({

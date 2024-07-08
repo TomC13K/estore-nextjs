@@ -56,4 +56,9 @@ npx prisma migrate dev --name init
 
 # tailiwind library
 npx shadcn-ui@latest init
+
+# adding the style for a card using shadcn
+npx shadcn-ui@latest add card
 ```
+
+ShadCN components will be in the COMPONENTS folder and UI
