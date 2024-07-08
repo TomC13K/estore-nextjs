@@ -1,6 +1,11 @@
 import { Nav, NavLink } from "@/src/components/Nav";
 import React from "react";
 
+// forces nextJS to NOT cache any of the admin pages
+// we will want most up to date version on these admin pages always
+// lets only leave caching on for public pages
+export const dynamic = "force-dynamic";
+
 export default function AdminLayout({
   children,
 }: Readonly<{
