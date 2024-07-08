@@ -60,11 +60,17 @@ npx shadcn-ui@latest init
 # adding the style for a card using shadcn
 npx shadcn-ui@latest add card
 
-# adding a button component
+# adding a button component & others below
 npx shadcn-ui@latest add button
-
-# adding table
 npx shadcn-ui@latest add table 
+
+# components for forms
+npx shadcn-ui@latest add label 
+npx shadcn-ui@latest add input 
+npx shadcn-ui@latest add textarea 
+
+# validation library
+npm i zod
 ```
 
 ShadCN components will be in the COMPONENTS folder and UI
