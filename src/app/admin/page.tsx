@@ -6,7 +6,9 @@ import {
   CardTitle,
 } from "@/src/components/ui/card";
 
-function getSalesData() {}
+function getSalesData() {
+  
+}
 
 export default function AdminDashboard() {
   return (
