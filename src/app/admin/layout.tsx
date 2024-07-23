@@ -1,4 +1,4 @@
-import { Nav, NavLink } from "@/src/components/Nav";
+import { Nav, NavLink } from "@/components/Nav";
 import React from "react";
 
 // forces nextJS to NOT cache any of the admin pages

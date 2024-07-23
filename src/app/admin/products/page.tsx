@@ -1,7 +1,7 @@
-import { Button } from "@/src/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { PageHeader } from "../_components/PageHeader";
 import  Link  from "next/link";
-import { Table, TableHead, TableHeader, TableRow } from "@/src/components/ui/table";
+import { Table, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 export default function AdminProductsPage() {
     return (

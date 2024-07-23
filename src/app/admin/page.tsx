@@ -4,8 +4,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/src/components/ui/card";
-import db from "@/src/db/db";
+} from "@/components/ui/card";
+import db from "@/db/db";
 import { formatCurrency, formatNumber } from "../../lib/formatters";
 
 async function getSalesData() {
@@ -23,8 +23,7 @@ async function getSalesData() {
 
 // helper function to wait for some time to simulate loading
 function wait(duration: number) {
-  return new Promise(resolve => 
-    setTimeout(resolve, duration));
+  return new Promise((resolve) => setTimeout(resolve, duration));
 }
 
 async function getUserData() {
@@ -45,7 +44,9 @@ async function getUserData() {
   return {
     userCount,
     averaValuePerUSer:
-      userCount === 0 ? 0 : (orderData._sum.pricePaidInCents || 0) / userCount /100,
+      userCount === 0
+        ? 0
+        : (orderData._sum.pricePaidInCents || 0) / userCount / 100,
   };
 }
 
@@ -53,12 +54,12 @@ async function getProductData() {
   // db.product.count({where: {isAvailableForPurchase: true}})
   // db.product.count({where: {isAvailableForPurchase: false}})
 
-  const [activeCount, inactiveCount ] = await Promise.all([
-    db.product.count({where: {isAvailableForPurchase: true}}),
-    db.product.count({where: {isAvailableForPurchase: false}})
+  const [activeCount, inactiveCount] = await Promise.all([
+    db.product.count({ where: { isAvailableForPurchase: true } }),
+    db.product.count({ where: { isAvailableForPurchase: false } }),
   ]);
 
-  return {activeCount, inactiveCount}
+  return { activeCount, inactiveCount };
 }
 
 export default async function AdminDashboard() {
@@ -66,10 +67,10 @@ export default async function AdminDashboard() {
   // const salesData = await getSalesData();
   // const userData = await getUserData();
 
-  const [ salesData, userData, productData ] = await Promise.all([
+  const [salesData, userData, productData] = await Promise.all([
     getSalesData(),
     getUserData(),
-    getProductData()
+    getProductData(),
   ]);
 
   return (
