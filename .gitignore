@@ -38,3 +38,4 @@ prisma/dev.db
 .vscode/settings.json
 /products
 /public/products
+.env
