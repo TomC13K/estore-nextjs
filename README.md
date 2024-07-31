@@ -76,6 +76,9 @@ npm i zod
 # stripe clients
 npm i stripe @stripe/stripe-js
 # https://docs.stripe.com/payments/quickstart?client=next
+
+# react stripe library for checkout screen
+npm i @stripe/react-stripe-js 
 ```
 
 ShadCN components will be in the COMPONENTS folder and UI
