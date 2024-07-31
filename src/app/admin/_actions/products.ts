@@ -103,6 +103,7 @@ export async function updateProduct(
     },
   });
 
+  // ech time product is added or updated need to revalidate path - refresh cache
   revalidatePath("/");
   revalidatePath("/products");
 

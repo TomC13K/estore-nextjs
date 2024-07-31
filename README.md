@@ -72,6 +72,10 @@ npx shadcn-ui@latest add textarea
 
 # validation library
 npm i zod
+
+# stripe clients
+npm i stripe @stripe/stripe-js
+# https://docs.stripe.com/payments/quickstart?client=next
 ```
 
 ShadCN components will be in the COMPONENTS folder and UI
