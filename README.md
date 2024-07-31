@@ -52,6 +52,7 @@ npm install prisma --save-dev
 npx prisma init --datasource-provider sqlite
 
 # DB migration with prism object when created in code
+# RUN THIS IN CASE that the DB file was deleted so it sync the DB structure with the fresh local DB
 npx prisma migrate dev --name init
 
 # tailiwind library
