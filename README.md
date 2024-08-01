@@ -79,6 +79,26 @@ npm i stripe @stripe/stripe-js
 
 # react stripe library for checkout screen
 npm i @stripe/react-stripe-js 
+
+# get secret key for stripe webhooks
+# https://docs.stripe.com/payments/handling-payment-events
+stripe listen --forward-to http://localhost:3000/webhooks/stripe
+
+# add resend library and react email lib so we can send emails using react
+# resend.com account needed, also api key RESEND_API_KEY
+npm i resend react-email @react-email/components
 ```
 
 ShadCN components will be in the COMPONENTS folder and UI
+
+## Install stripe
+
+```bash
+brew install stripe/stripe-cli/stripe
+
+# Connect the CLI to your dashboard
+stripe login
+```
+
+# ordering n buying
+- When filling the Stripe payment form, use email that is registered to STRIPE so it mathces the existing user if need to be 
