@@ -34,7 +34,7 @@ type CheckoutFormProps = {
 };
 
 const stripePromise = loadStripe(
-  process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY as string
+  process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY as string
 );
 
 export function CheckoutForm({ product, clientSecret }: CheckoutFormProps) {
